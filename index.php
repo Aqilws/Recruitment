@@ -2,6 +2,8 @@
 require 'db.php';
 $query = "SELECT * FROM data_reqruitment";
 $result = $conn->query($query);
+
+// test ik
 ?>
 
 
