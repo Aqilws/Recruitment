@@ -757,6 +757,12 @@ $result = $conn->query($query);
       if (candidateIndex !== -1) {
         const candidate = candidates[candidateIndex];
 
+        // console.log(JSON.stringify({
+        //       id: candidate.id,
+        //       status: newStatus,
+        //       status_date: newStatus === "on-progress" ? new Date().toISOString().slice(0, 19).replace("T", " ") : null,
+        //     }));
+
         // Kirim perubahan ke server
         fetch("update_status.php", {
             method: "POST",
@@ -769,7 +775,9 @@ $result = $conn->query($query);
               status_date: newStatus === "on-progress" ? new Date().toISOString().slice(0, 19).replace("T", " ") : null,
             }),
           })
-          .then((res) => res.json())
+          .then((res) => {
+            return res.json()
+          })
           .then((result) => {
             if (result.success) {
               // Update lokal setelah berhasil simpan
@@ -783,6 +791,7 @@ $result = $conn->query($query);
             }
           })
           .catch((err) => {
+            
             console.error("Error updating status:", err);
             alert("Server error");
           });

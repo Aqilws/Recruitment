@@ -1,0 +1,33 @@
+# Composer dependencies
+/vendor/
+
+# Environment files
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# PHPStorm / VSCode / IDE config
+.idea/
+.vscode/
+
+# Cache files
+*.cache
+*.tmp
+
+# Uploads (optional: jika folder berisi file upload dari user)
+uploads/
+upload/
+
+# Backup / temporary files
+*.bak
+*.swp
+*.swo
+*.orig
+
+# Test HTML file (optional)
+test.html

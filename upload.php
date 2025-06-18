@@ -4,7 +4,7 @@ require 'autoload.php';
 use PhpOffice\PhpSpreadsheet\IOFactory;
 
 // DB connection
-$conn = new mysqli("localhost", "root", "", "reqruitment");
+require 'db.php';
 
 if ($conn->connect_error) {
     die(json_encode(['success' => false, 'message' => 'DB connection failed']));

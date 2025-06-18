@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "reqruitment");
+require 'db.php';
 $result = $conn->query("SELECT * FROM data_reqruitment");
 
 $candidates = [];

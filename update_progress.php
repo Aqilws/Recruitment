@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-$conn = new mysqli("localhost", "root", "", "reqruitment");
+require 'db.php';
 
 // Set zona waktu Indonesia (WIB)
 date_default_timezone_set("Asia/Jakarta");
